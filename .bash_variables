@@ -1,0 +1,4 @@
+# If you want to set the editor for Git and also other programs, set the
+# standardized VISUAL and EDITOR environment variables.
+export VISUAL=vim
+export EDITOR=${VISUAL}
