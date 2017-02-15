@@ -96,7 +96,7 @@ alias l='ls -CF'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# Custom settings.
+# Bash settings.
 if [ -f ~/.bash_settings ]; then
   . ~/.bash_settings
 fi
@@ -110,6 +110,7 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# Environment variables.
 if [ -f ~/.bash_variables ]; then
     . ~/.bash_variables
 fi
