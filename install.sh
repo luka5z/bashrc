@@ -21,7 +21,8 @@
 # backup.
 #
 # * AFTER YOU RUN:
-# Merge your backup with installed files.
+# Merge your backup with installed files. Keep custom settings in separate 
+# ~/.bash_custom file.
 
 
 SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"

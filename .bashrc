@@ -124,3 +124,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Custom settings most often enforced by other tools or personal preferences.
+if [ -f ~/.bash_custom ]; then
+    . ~/.bash_custom
+fi
