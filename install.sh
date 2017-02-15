@@ -1,6 +1,14 @@
 #!/bin/bash
 
-# BEFORE YOU RUN:
+
+# Set environment by:
+#  - installing Bash settings
+#  - installing Powerline prompt
+#  - adding Git aliases
+#
+# It's a two step process.
+#
+# * BEFORE YOU RUN:
 # Remember to backup your files:
 #  - ~/.bashrc
 #  - ~/.bash_aliases
@@ -11,11 +19,9 @@
 # Install script makes a copy before it creates a symbolic link, but
 # if commands would be run twice, latter execution will overwrite initial 
 # backup.
-
-# Set environment by:
-#  - installing Bash settings
-#  - installing Powerline prompt
-#  - adding Git aliases
+#
+# * AFTER YOU RUN:
+# Merge your backup with installed files.
 
 
 SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
