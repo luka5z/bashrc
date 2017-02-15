@@ -1,5 +1,8 @@
 #!/bin/bash
 
+
+SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
 sudo apt-get install python-pip
 
 # Install powerline PIP package
@@ -24,7 +27,7 @@ pip install --user pygit2==0.24.2
 # or support fontconfig for powerline to work properly with powerline-specific
 # glyphs.
 if [ "$1" == "--install-fonts" ]; then
-	font_dir=`mktemp -p . -d -t powerline-fonts.XXXXXX`
+	font_dir=`mktemp -p ${SCRIPTDIR} -d -t powerline-fonts.XXXXXX`
 
 	git clone https://github.com/powerline/fonts.git ${font_dir}
 	${font_dir}/install.sh
@@ -43,7 +46,7 @@ cat <<-'EOF' > ~/.config/powerline/config.json
 EOF
 
 # Install powerline settings to the .bashrc
-cp ./.powerlinerc ~/
+ln -b -s "${SCRIPTDIR}"/.powerlinerc "${HOME}" 
 cat <<- 'EOF' >> ~/.bashrc
 
 # Enable powerline settings
