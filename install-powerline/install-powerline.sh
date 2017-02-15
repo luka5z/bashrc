@@ -47,7 +47,7 @@ EOF
 
 # Install powerline settings to the .bashrc
 ln -b -s "${SCRIPTDIR}"/.powerlinerc "${HOME}" 
-cat <<- 'EOF' >> ~/.bashrc
+cat <<- 'EOF' >> ~/.bash_custom
 
 # Enable powerline settings
 if [ -f ~/.powerlinerc ]; then
